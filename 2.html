@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Suprise...!</title>
+    <link rel="stylesheet" type="text/css" href="2.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Will you give me one chance?</h1>
+        <div class="buttons">
+            <button id="no-btn">No</button>
+            <button id="yes-btn">Yes</button>
+        </div>
+        <div class="popup" id="popup">
+            <p>Aww, Thank You!<br>LET START THE NEW JOURNEY FROM NOW!</p>
+        </div>
+    </div>
+    <script>
+        const noButton = document.getElementById("no-btn");
+const yesButton = document.getElementById("yes-btn");
+const popup = document.getElementById("popup");
+
+noButton.addEventListener("mouseover", () => {
+    noButton.style.position = "absolute";
+    noButton.style.left = Math.random() * 40 + "vw";
+    noButton.style.top = Math.random() * 40 + "vh";
+});
+
+yesButton.addEventListener("click", () => {
+    popup.style.display = "block";
+});
+
+popup.addEventListener("click", () => {
+    popup.style.display = "none";
+});
+
+// Hide the popup initially
+popup.style.display = "none";
+
+    </script>
+</body>
+</html>
